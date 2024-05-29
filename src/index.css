@@ -2,6 +2,7 @@
 :root {
   --toastify-color-progress-light: linear-gradient(to right, #4cd964, green);
 }
+
 * {
   margin: 0;
   padding: 0;
