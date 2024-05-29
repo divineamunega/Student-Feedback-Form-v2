@@ -1,0 +1,76 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8));
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.formBox {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 50px 60px 70px;
+  text-align: center;
+}
+
+.formBox h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #3c00a0;
+  position: relative;
+}
+
+.formBox h1::after {
+  content: "";
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background: #3c00a0;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.formBox h2 {
+  font-size: 1.3rem;
+  color: gray;
+  margin: 0px 0px 20px;
+}
+
+.formBox p {
+  margin: 10px 0px 30px;
+  font-size: 15px;
+}
+
+.formBox p a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #3c00a0;
+  font-weight: bold;
+}
+
+.btnField {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnField a {
+  padding: 15px 70px;
+  background: #eaeaea;
+  border-radius: 50px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+.btnField button {
+  color: #fff;
+}
