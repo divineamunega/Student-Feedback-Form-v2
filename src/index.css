@@ -1,31 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 :root {
-	--toastify-color-progress-light: linear-gradient(to right, #4cd964, green);
+  --toastify-color-progress-light: linear-gradient(to right, #4cd964, green);
 }
 * {
-	margin: 0;
-	padding: 0;
-	font-family: "Manrope", sans-serif;
-	text-decoration: none;
-	font-size: 64.5%;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  text-decoration: none;
+  font-size: 64.5%;
+  box-sizing: border-box;
 }
 
 .Toastify__toast {
-	font-size: 3.7rem;
-	text-wrap: nowrap;
+  font-size: 3.7rem;
+  text-wrap: nowrap;
 }
 
 .Toastify__toast-container {
-	width: fit-content;
+  width: fit-content;
 }
 
-
-form{
-	width: 50%;
+form {
+  width: 50%;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 15px 10px;
   margin-bottom: 15px;
@@ -35,8 +35,8 @@ input, textarea {
   color: #000000;
 }
 
-textarea{
-	min-height: 200px;
+textarea {
+  min-height: 200px;
 }
 
 button {
@@ -48,4 +48,10 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  form {
+    width: 90%;
+  }
 }

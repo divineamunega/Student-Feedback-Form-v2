@@ -14,10 +14,17 @@
   font-weight: bold;
 }
 
-.app{
-	height: 85vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #eee;
+.app {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    font-size: 2rem;
+    padding: 0px 20px;
+  }
 }
