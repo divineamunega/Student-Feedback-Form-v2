@@ -20,16 +20,11 @@ function Page() {
 	useEffect(() => {
 		onAuthStateChanged(auth, (user) => {
 			if (user) {
-				// User is signed in, see docs for a list of available properties
-				// https://firebase.google.com/docs/reference/js/firebase.User
 				setName(user.displayName);
 				setEmail(user.email);
-				// ...
 			} else {
-				// User is signed out
 				console.log("Use Is signed out");
 				navigate("/");
-				// ...
 			}
 		});
 	}, [name, email, navigate]);

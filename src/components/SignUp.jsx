@@ -79,4 +79,3 @@ function SignUp() {
 }
 
 export default SignUp;
-// onClick = { handleSignUpButton };

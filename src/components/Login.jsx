@@ -26,9 +26,6 @@ function Login() {
       navigate("/page");
     } catch (err) {
       toast.error(err.message);
-      // setName("");
-      // setEmail("");
-      // setPassword("");
     }
   }
 
