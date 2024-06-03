@@ -7,49 +7,58 @@ import { useFeedBack } from "../context/FeedbackContext";
 import FeedbackForm from "./FeedbackForm";
 
 function Feedback() {
-	const [name] = useState("");
-	const [noOfCourses, setNoOfCourses] = useState("");
-	const [email] = useState("");
+  const [name, setName] = useState("");
+  const [noOfCourses, setNoOfCourses] = useState("");
+  const [email, setEmail] = useState("");
 
-	const { state: feedbackObj, dispatch } = useFeedBack();
+  const { state: feedbackObj, dispatch } = useFeedBack();
 
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
-	console.log(feedbackObj);
+  console.log(feedbackObj, name);
 
-	useEffect(() => {
-		onAuthStateChanged(auth, (user) => {
-			if (user) {
-				dispatch({ type: "feedback/name", payload: name });
-				dispatch({ type: "feedback/email", payload: email });
-			} else {
-				console.log("User Is signed out");
-				navigate("/");
-			}
-		});
-	}, [name, email, navigate, dispatch]);
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setEmail(user.email);
+        setName(user.displayName);
+        dispatch({ type: "feedback/name", payload: user.displayName });
+        dispatch({ type: "feedback/email", payload: user.email });
 
-	return (
-		<div className={styles.formContainer}>
-			<select
-				name="noOfCourses"
-				id="noOfCourses"
-				value={noOfCourses}
-				onChange={(e) => setNoOfCourses(e.target.value)}
-			>
-				<option value="No of Courses">Select No of Courses</option>
-				{Array.from({ length: 10 }, (_, i) => (
-					<option key={i} value={i + 1}>
-						{i + 1}
-					</option>
-				))}
-			</select>
+        console.log(user.name);
+      } else {
+        console.log("User Is signed out");
+        navigate("/");
+      }
+    });
+  }, [name, email, navigate, dispatch]);
 
-			{Array.from({ length: +noOfCourses }, (_, i) => (
-				<FeedbackForm noOfCourses={noOfCourses} i={i} key={i} />
-			))}
-		</div>
-	);
+  return (
+    <div className="page">
+      <header className="header">Welcome {name}</header>
+      <div className="app">
+        <div className={styles.formContainer}>
+          <select
+            name="noOfCourses"
+            id="noOfCourses"
+            value={noOfCourses}
+            onChange={(e) => setNoOfCourses(e.target.value)}
+          >
+            <option value="No of Courses">Select No of Courses</option>
+            {Array.from({ length: 10 }, (_, i) => (
+              <option key={i} value={i + 1}>
+                {i + 1}
+              </option>
+            ))}
+          </select>
+
+          {Array.from({ length: +noOfCourses }, (_, i) => (
+            <FeedbackForm noOfCourses={noOfCourses} i={i} key={i} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Feedback;

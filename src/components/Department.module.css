@@ -2,7 +2,7 @@
   font-size: 5rem;
 }
 
-.header {
+:global(.header) {
   height: 15vh;
   background-color: #3c00a0;
   color: #ffffff;
