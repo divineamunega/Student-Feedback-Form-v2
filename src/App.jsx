@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import Feedback from "./components/Feedback";
 import Department from "./components/Department";
+import Admin from "./components/Admin";
 import FeedbackProvider from "./context/FeedbackContext";
 function App() {
 	return (
@@ -35,6 +36,7 @@ function App() {
 						<Route path="department" element={<Department />} />
 						<Route path="feedback" element={<Feedback />} />
 					</Route>
+					<Route path="admin" element={<Admin />} />
 					<Route
 						path="*"
 						element={<div style={{ fontSize: "3rem" }}>404 Page not found</div>}
