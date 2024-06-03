@@ -6,29 +6,35 @@ import { Navigate } from "react-router-dom";
 import AuthPage from "./pages/AuthPage";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import Feedback from "./components/Feedback";
+import Department from "./components/Department";
 function App() {
-	return (
-		<>
-			<ToastContainer />
+  return (
+    <>
+      <ToastContainer />
 
-			<BrowserRouter>
-				<Routes>
-					<Route index element={<Navigate to="auth" />} />
-					<Route path="auth" element={<AuthPage />}>
-						<Route index element={<Navigate to="signup" />} />
-						<Route path="signup" element={<SignUp />} />
-						<Route path="login" element={<Login />} />
-					</Route>
-					<Route path="/login" element={<Login />} />
-					<Route path="/page" element={<Page />} />
-					<Route
-						path="*"
-						element={<div style={{ fontSize: "3rem" }}>404 Page not found</div>}
-					/>
-				</Routes>
-			</BrowserRouter>
-		</>
-	);
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Navigate to="auth" />} />
+          <Route path="auth" element={<AuthPage />}>
+            <Route index element={<Navigate to="signup" />} />
+            <Route path="signup" element={<SignUp />} />
+            <Route path="login" element={<Login />} />
+          </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/page" element={<Page />}>
+            <Route index replace element={<Navigate to="department" />} />
+            <Route path="department" element={<Department />} />
+            <Route path="feedback" element={<Feedback />} />
+          </Route>
+          <Route
+            path="*"
+            element={<div style={{ fontSize: "3rem" }}>404 Page not found</div>}
+          />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;

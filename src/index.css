@@ -51,6 +51,10 @@ button {
   cursor: pointer;
 }
 
+input:focus{
+  outline: 0;
+}
+
 @media only screen and (max-width: 767px) {
   form {
     width: 90%;

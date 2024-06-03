@@ -1,0 +1,9 @@
+.submit {
+  margin-top: 15vh;
+  height: 85vh;
+  width: 50%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
