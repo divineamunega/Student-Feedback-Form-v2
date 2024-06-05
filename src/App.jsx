@@ -37,7 +37,7 @@ function App() {
 						<Route path="department" element={<Department />} />
 						<Route path="feedback" element={<Feedback />} />
 					</Route>
-					<Route path="admin" element={<Admin />} />
+					<Route path="/admin" element={<Admin />} />
 					<Route
 						path="*"
 						element={<div style={{ fontSize: "3rem" }}>404 Page not found</div>}
