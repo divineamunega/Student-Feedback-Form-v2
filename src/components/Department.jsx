@@ -33,7 +33,7 @@ function Department() {
 	}, [name, email, navigate, dispatch]);
 
 	return (
-		<div className="page">
+		<div className={`page ${styles.header}`}>
 			<header className="header">Welcome {name}!</header>
 			<div className="app">
 				<form action="">
