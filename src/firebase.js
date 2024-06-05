@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { get, getDatabase, ref } from "firebase/database";
+import { getDatabase, ref } from "firebase/database";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyCI3TQOCvCXpbT3oC5IQszLueyJkwXR07k",
@@ -16,7 +16,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const database = getDatabase(app);
-console.log(database);
 
 const feedbackRef = ref(database, "/feedbacks");
 
