@@ -68,7 +68,7 @@ function Feedback() {
 								<FeedbackForm
 									noOfCourses={noOfCourses}
 									i={i}
-									key={i}
+									key={crypto.randomUUID}
 									currentForm={currentForm}
 									setCurrentForm={setCurrentForm}
 								/>

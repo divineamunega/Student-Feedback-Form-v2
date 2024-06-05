@@ -26,6 +26,7 @@ const FeedbackForm = ({ i, noOfCourses, currentForm, setCurrentForm }) => {
 				});
 
 				toast.success("Your feedback has been recorded");
+				navigate("/success");
 			} catch (err) {
 				console.log(err);
 				toast.error("Error");
@@ -59,7 +60,6 @@ const FeedbackForm = ({ i, noOfCourses, currentForm, setCurrentForm }) => {
 		handleNext();
 		if (i + 1 === +noOfCourses) {
 			setShouldSubmit(true);
-			navigate("/success");
 		}
 	};
 
