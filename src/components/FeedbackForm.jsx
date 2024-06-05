@@ -65,11 +65,12 @@ const FeedbackForm = ({ i, noOfCourses, currentForm, setCurrentForm }) => {
 
 	return (
 		<form onSubmit={handleFormSubmit} className={styles.formElement}>
+			<h1 style={{ fontSize: "3rem" }}>{`Feedback ${i + 1}/${noOfCourses}`}</h1>
 			<input
 				type="text"
 				name="lecturer-name"
 				id="lecturer-name"
-				placeholder="Lecturer's Name"
+				placeholder={`Lecturer's Name`}
 				value={lecturerName}
 				onChange={(e) => setLecturerName(e.target.value)}
 			/>
