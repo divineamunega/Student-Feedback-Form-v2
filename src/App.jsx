@@ -10,6 +10,7 @@ import Feedback from "./components/Feedback";
 import Department from "./components/Department";
 import Admin from "./components/Admin";
 import FeedbackProvider from "./context/FeedbackContext";
+import Success from "./pages/Success";
 function App() {
 	return (
 		<>
@@ -41,6 +42,7 @@ function App() {
 						path="*"
 						element={<div style={{ fontSize: "3rem" }}>404 Page not found</div>}
 					/>
+					<Route path="/success" element={<Success />} />
 				</Routes>
 			</BrowserRouter>
 		</>
