@@ -1,3 +1,43 @@
-div {
-	font-size: 10rem;
+.admin {
+	background-color: transparent;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.admin h1{
+    background-color: #3c00a0;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.admin ul{
+    padding: 0px 20px;
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+.admin ul li{
+    margin: 40px 0px;
+    padding: 20px;
+    background-color: rgba(60, 0, 160, 0.2);
+}
+
+.admin ul li aside{
+    /* color: white; */
+    margin: 10px 0px;
+}
+
+.admin ul li p{
+    font-size: 1.5rem;
+    margin: 5px 0px 0px;
+}
+
+.admin ul li p span{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0px 0px 0px 0px;
 }

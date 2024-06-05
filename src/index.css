@@ -10,6 +10,7 @@
   text-decoration: none;
   font-size: 64.5%;
   box-sizing: border-box;
+  list-style: none;
 }
 
 .Toastify__toast {
